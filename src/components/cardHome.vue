@@ -1,20 +1,26 @@
 <template>
-    <div id="backgroundCard">
-        <h1> Esse é o componente pai </h1>
-        <div class="card">
-            <svg-icon type="mdi" :path="path" class="cardIcon"></svg-icon>
-            <dadosCardHome class="cardTitulo" :CardTitulo="cardData[0].titulo"/>
-            <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[0].subtitulo"/>
-        </div>
+    <div>
+        <div id="backgroundCard">
+            <div class="card">
+                <svg-icon type="mdi" :path="path" class="cardIcon"></svg-icon>
+                <dadosCardHome class="cardTitulo" :CardTitulo="cardData[0].titulo"/>
+                <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[0].subtitulo"/>
+            </div>
+            <div class="card">
+                <svg-icon type="mdi" :path="path" class="cardIcon"></svg-icon>
+                <dadosCardHome class="cardTitulo" :CardTitulo="cardData[1].titulo"/>
+                <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[1].subtitulo"/>
+            </div>
 
-    </div>
-    
+        </div>
+    </div>    
 </template>
 
 <script>
 import dadosCardHome from './dadosCardHome.vue';
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiWalletOutline } from '@mdi/js';
+import { mdiApplicationOutline } from '@mdi/js';
 export default {
     components: {
         dadosCardHome,
@@ -22,11 +28,17 @@ export default {
     },
     data(){
         return {
-            path: mdiWalletOutline,
+            path: [mdiWalletOutline, mdiApplicationOutline],
+            
             cardData: [
                 {
                     titulo: "$143,624",
                     subtitulo: "Your Bank Balance"
+
+                },
+                {
+                    titulo: "7",
+                    subtitulo: "Employees working today"
 
                 }
             ],
@@ -47,6 +59,8 @@ export default {
     height: auto;
     background-color: #f9fafc;
     padding-bottom: 20vh;
+    display: flex;
+    flex-direction: row;
 }
 
 .card {
@@ -60,7 +74,7 @@ export default {
     box-shadow: -7px 10px 25px #d5d7e3;
 }
 
-dadosCardHome {
+.card dadosCardHome {
     display: flex;
     flex-direction: column;
 }
@@ -75,7 +89,7 @@ dadosCardHome {
 .cardSubtitulo {
     font-family: 'Signika Negative', sans-serif;
     font-size: x-small;
-    width: 8vh;
+    width: 10vh;
     word-wrap: break-word;
 
 }
