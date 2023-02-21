@@ -2,7 +2,7 @@
     <div id="backgroundCard">
         <h1> Esse é o componente pai </h1>
         <div class="card">
-            <svg-icon type="mdi" :path="path"></svg-icon>
+            <svg-icon type="mdi" :path="path" class="cardIcon"></svg-icon>
             <dadosCardHome class="cardTitulo" :CardTitulo="cardData[0].titulo"/>
             <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[0].subtitulo"/>
         </div>
@@ -40,6 +40,8 @@ export default {
 
 <style scoped>
 
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500&display=swap');
+
 #backgroundCard {
     width: auto;
     height: auto;
@@ -51,7 +53,7 @@ export default {
     border: 0px solid black;
     margin-bottom: 1%;
     margin-left: 1%;
-    padding: 3% 0% 3% 0%;
+    padding: 1% 0% 2% 1%;
     border-radius: 20px;
     width: 25vh;
     background-color: #ffffff;
@@ -61,6 +63,21 @@ export default {
 dadosCardHome {
     display: flex;
     flex-direction: column;
+}
+
+.cardTitulo {
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Signika Negative', sans-serif;
+    margin-bottom: 3%;
+}
+
+.cardSubtitulo {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: x-small;
+    width: 8vh;
+    word-wrap: break-word;
+
 }
 
 </style>
