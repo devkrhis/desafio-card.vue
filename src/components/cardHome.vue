@@ -2,12 +2,12 @@
     <div>
         <div id="backgroundCard">
             <div class="card">
-                <svg-icon type="mdi" :path="path" class="cardIcon"></svg-icon>
+                <svg-icon type="mdi" :path="path1" class="cardIcon"></svg-icon>
                 <dadosCardHome class="cardTitulo" :CardTitulo="cardData[0].titulo"/>
                 <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[0].subtitulo"/>
             </div>
             <div class="card">
-                <svg-icon type="mdi" :path="path" class="cardIcon"></svg-icon>
+                <IconCalendar type="mdi" :path="path2" class="cardIcon"></IconCalendar>
                 <dadosCardHome class="cardTitulo" :CardTitulo="cardData[1].titulo"/>
                 <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[1].subtitulo"/>
             </div>
@@ -19,16 +19,19 @@
 <script>
 import dadosCardHome from './dadosCardHome.vue';
 import SvgIcon from '@jamescoyle/vue-icon';
+import IconCalendar from '@jamescoyle/vue-icon';
 import { mdiWalletOutline } from '@mdi/js';
-import { mdiApplicationOutline } from '@mdi/js';
+import { mdiCalendarToday } from '@mdi/js';
 export default {
     components: {
         dadosCardHome,
-        SvgIcon
+        SvgIcon,
+        IconCalendar
     },
     data(){
         return {
-            path: [mdiWalletOutline, mdiApplicationOutline],
+            path1: mdiWalletOutline,
+            path2: mdiCalendarToday,
             
             cardData: [
                 {
