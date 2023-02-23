@@ -7,7 +7,7 @@
                 <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[0].subtitulo"/>
             </div>
             <div class="card">
-                <IconCalendar type="mdi" :path="path2" class="cardIcon"></IconCalendar>
+                <svg-icon type="mdi" :path="path2" class="cardIcon"></svg-icon>
                 <dadosCardHome class="cardTitulo" :CardTitulo="cardData[1].titulo"/>
                 <dadosCardHome class="cardSubtitulo" :CardSubtitulo="cardData[1].subtitulo"/>
             </div>
@@ -19,14 +19,12 @@
 <script>
 import dadosCardHome from './dadosCardHome.vue';
 import SvgIcon from '@jamescoyle/vue-icon';
-import IconCalendar from '@jamescoyle/vue-icon';
 import { mdiWalletOutline } from '@mdi/js';
 import { mdiCalendarToday } from '@mdi/js';
 export default {
     components: {
         dadosCardHome,
-        SvgIcon,
-        IconCalendar
+        SvgIcon
     },
     data(){
         return {
