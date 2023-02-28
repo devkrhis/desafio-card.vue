@@ -14,8 +14,7 @@
 <script>
 import dadosCardHome from "./dadosCardHome.vue";
 import SvgIcon from "@jamescoyle/vue-icon";
-import { mdiWalletOutline } from "@mdi/js";
-import { mdiCalendarToday } from "@mdi/js";
+import { mdiWalletOutline, mdiCalendarToday, mdiAbacus, mdiSkateboard, mdiAccessPoint,mdiAccountBoxMultipleOutline, mdiAccountChildCircle, mdiAirport } from "@mdi/js";
 export default {
   components: {
     dadosCardHome,
@@ -23,7 +22,6 @@ export default {
   },
   data() {
     return {
-    //   path: [mdiWalletOutline, mdiCalendarToday],
       cardData: [
         {
           path: mdiWalletOutline,
@@ -36,32 +34,32 @@ export default {
           subtitulo: "Employees working today",
         },
         {
-          path: mdiCalendarToday,
+          path: mdiAbacus,
           titulo: "22",
           subtitulo: "Teste 20",
         },
         {
-          path: mdiCalendarToday,
+          path: mdiSkateboard,
           titulo: "7",
           subtitulo: "Employees working today",
         },
         {
-          path: mdiCalendarToday,
+          path: mdiAccountBoxMultipleOutline,
           titulo: "7",
           subtitulo: "Employees working today",
         },
         {
-          path: mdiCalendarToday,
+          path: mdiAccessPoint,
           titulo: "7",
           subtitulo: "Employees working today",
         },
         {
-          path: mdiCalendarToday,
+          path: mdiAccountChildCircle,
           titulo: "7",
           subtitulo: "Employees working today",
         },
         {
-          path: mdiCalendarToday,
+          path: mdiAirport,
           titulo: "7",
           subtitulo: "Employees working today",
         },
